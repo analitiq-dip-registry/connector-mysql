@@ -1,0 +1,88 @@
+{
+  "connector_name": "MySQL",
+  "connector_type": "database",
+  "connector_descr": "Open-source relational database management system for structured data storage, querying, and management",
+  "slug": "mysql",
+  "driver": "mysql",
+  "enable_ssh": true,
+  "api_doc_url": "https://dev.mysql.com/doc/refman/8.0/en/",
+  "auth": {
+    "type": "db",
+    "authorize": {
+      "url": "/db_utils",
+      "method": "POST",
+      "body": "{\"test_connect_only\": true}"
+    }
+  },
+  "form_fields": [
+    {
+      "name": "host",
+      "label": "Host",
+      "type": "text",
+      "required": true,
+      "default": "127.0.0.1",
+      "placeholder": "e.g. 127.0.0.1 or db.example.com"
+    },
+    {
+      "name": "port",
+      "label": "Port",
+      "type": "text",
+      "required": true,
+      "default": "3306"
+    },
+    {
+      "name": "database",
+      "label": "Database",
+      "type": "text",
+      "required": true,
+      "placeholder": "e.g. my_database"
+    },
+    {
+      "name": "username",
+      "label": "Username",
+      "type": "text",
+      "required": true,
+      "placeholder": "e.g. root"
+    },
+    {
+      "name": "password",
+      "label": "Password",
+      "type": "password",
+      "required": true,
+      "secret": true
+    },
+    {
+      "name": "ssl_mode",
+      "label": "SSL Mode",
+      "type": "select",
+      "required": false,
+      "default": "PREFERRED",
+      "options": [
+        { "label": "Disabled", "value": "DISABLED" },
+        { "label": "Preferred", "value": "PREFERRED" },
+        { "label": "Required", "value": "REQUIRED" },
+        { "label": "Verify CA", "value": "VERIFY_CA" },
+        { "label": "Verify Identity", "value": "VERIFY_IDENTITY" }
+      ]
+    },
+    {
+      "name": "ssl_ca",
+      "label": "SSL CA Certificate",
+      "type": "textarea",
+      "required": false
+    },
+    {
+      "name": "ssl_cert",
+      "label": "SSL Client Certificate",
+      "type": "textarea",
+      "required": false
+    },
+    {
+      "name": "ssl_key",
+      "label": "SSL Client Key",
+      "type": "textarea",
+      "required": false,
+      "secret": true
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "connector_name": "MySQL",
+  "slug": "mysql",
+  "version": "1.0.0",
+  "endpoints": []
+}
