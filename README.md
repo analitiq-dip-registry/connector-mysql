@@ -1,3 +1,5 @@
+![Status: Verified](https://img.shields.io/badge/status-verified-brightgreen)
+
 # MySQL
 
 Open-source relational database management system (RDBMS) for structured data storage, querying, and management. MySQL is one of the most widely used databases, powering web applications, data warehouses, and transactional systems.
